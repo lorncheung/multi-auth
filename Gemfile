@@ -25,6 +25,7 @@ gem 'ruby-debug'
 # gem 'aws-s3', :require => 'aws/s3'
 gem 'fbgraph'
 gem 'oauth2'
+gem "oa-openid"
 gem 'omniauth'
 gem 'nifty-generators' #Just to create a basic layout
 
