@@ -1,25 +1,17 @@
 <div class="navigation">
   <% if current_user %>
+    <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/#{session[:auth_provider].downcase}_64.png" %>
     Welcome, <%= current_user.name %>!
     <%= link_to "Sign Out", signout_path %>
+    <pre><%= session[:auth_info].to_yaml %></pre>
   <% else %>
     Sign in with: 
     <div>
-      <%= link_to "/auth/facebook" do %> 
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png" %>
-      <% end %>
-      <%= link_to "/auth/twitter" do %>
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/twitter_64.png" %>
-      <% end %>
-      <%= link_to "/auth/google" do %>
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/google_64.png" %>
-      <% end %>
-      <%= link_to "/auth/yahoo" do %>
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/yahoo_64.png" %>
+      <% Authentication::AUTH_OPTIONS.each do |auth| %>
+        <%= link_to "/auth/#{auth}" do %> 
+          <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/#{auth}_64.png" %>
+        <% end %>
       <% end %>
     </div>
   <% end %>
 </div>
-<% if current_user %>
- <pre><%= session[:auth_info].to_yaml %></pre>
-<% end %>

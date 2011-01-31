@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Grouppix::Application.config.session_store :cookie_store, :key => '_grouppix_session'
+Multiauth::Application.config.session_store :cookie_store, :key => '_multiauth_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Grouppix::Application.config.session_store :active_record_store
+# Multiauth::Application.config.session_store :active_record_store

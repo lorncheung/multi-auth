@@ -3,7 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+#gem 'rails', :git => 'git://github.com/rails/rails.git'
+#gem 'arel', :git => 'git://github.com/rails/arel.git'
+#gem 'rack', :git => 'git://github.com/rack/rack.git'
 
 gem 'mysql2'
 gem 'passenger'
@@ -15,16 +17,14 @@ gem 'passenger'
 # gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-gem 'ruby-debug'
-# gem 'ruby-debug19'
+#gem 'ruby-debug'
+#gem 'ruby-debug19'
 
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
-gem 'fbgraph'
-gem 'oauth2'
 gem "oa-openid"
 gem 'omniauth'
 gem 'nifty-generators' #Just to create a basic layout
@@ -34,6 +34,7 @@ gem 'nifty-generators' #Just to create a basic layout
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
+  gem 'rak'
   gem 'webrat'
   gem 'rspec'
   gem 'rspec-rails'
